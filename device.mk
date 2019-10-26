@@ -127,6 +127,10 @@ PRODUCT_PACKAGES += \
     libldacBT_dec \
     libbt-vendor
 
+# AuthSecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0-service
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4 \
