@@ -38,6 +38,7 @@
     <allow-in-power-save package="com.fingerprints.extension.service" />
     <allow-in-power-save package="com.qualcomm.atfwd" />
     <allow-in-power-save package="com.qualcomm.qti.autoregistration" />
+    <allow-in-power-save package="com.qualcomm.qti.biometrics.fingerprint.service" />
     <allow-in-power-save package="com.qualcomm.qti.callenhancement" />
     <allow-in-power-save package="com.qualcomm.qti.gsma.services.nfc" />
     <allow-in-power-save package="com.qualcomm.qti.ims" />
