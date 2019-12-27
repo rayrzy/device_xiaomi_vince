@@ -1539,8 +1539,8 @@
         <ctl name="Ext Spk Switch" value="On" />
     </path>
 
-    <path name="hph-lowpower-mode">
-        <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
+    <path name="hph-highquality-mode">
+        <ctl name="RX HPH Mode" value="CLS_H_HIFI" />
     </path>
 
     <path name="hph-lowpower-mode">
