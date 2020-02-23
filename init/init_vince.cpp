@@ -25,11 +25,15 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <android-base/properties.h>
+#include <cstdlib>
+#include <fstream>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/sysinfo.h>
+#include <unistd.h>
 
+#include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
@@ -37,11 +41,15 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-char const *heaptargetutilization;
+using android::base::GetProperty;
+using android::init::property_set;
+
+char const *heapstartsize;
+char const *heapgrowthlimit;
+char const *heapsize;
 char const *heapminfree;
 char const *heapmaxfree;
-
-using android::init::property_set;
+char const *heaptargetutilization;
 
 void check_device()
 {
@@ -49,13 +57,27 @@ void check_device()
 
     sysinfo(&sys);
 
-    if (sys.totalram > 2048ull * 1024 * 1024) {
-        // from phone-xhdpi-4096-dalvik-heap.mk
+    if (sys.totalram > 5072ull * 1024 * 1024) {
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        heapstartsize = "16m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.5";
+        heapminfree = "8m";
+        heapmaxfree = "32m";
+    } else if (sys.totalram > 3072ull * 1024 * 1024) {
+        // from - phone-xxhdpi-4096-dalvik-heap.mk
+        heapstartsize = "8m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
         heaptargetutilization = "0.6";
         heapminfree = "8m";
         heapmaxfree = "16m";
     } else {
-        // from phone-xhdpi-2048-dalvik-heap.mk
+        // from - phone-xhdpi-2048-dalvik-heap.mk
+        heapstartsize = "8m";
+        heapgrowthlimit = "192m";
+        heapsize = "512m";
         heaptargetutilization = "0.75";
         heapminfree = "512k";
         heapmaxfree = "8m";
@@ -96,9 +118,9 @@ void vendor_load_properties()
     check_device();
     set_avoid_gfxaccel_config();
 
-    property_set("dalvik.vm.heapstartsize", "8m");
-    property_set("dalvik.vm.heapgrowthlimit", "192m");
-    property_set("dalvik.vm.heapsize", "512m");
+    property_set("dalvik.vm.heapstartsize", heapstartsize);
+    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_set("dalvik.vm.heapsize", heapsize);
     property_set("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_set("dalvik.vm.heapminfree", heapminfree);
     property_set("dalvik.vm.heapmaxfree", heapmaxfree);
