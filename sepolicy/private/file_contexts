@@ -1,3 +1,6 @@
 # Kcal
 /sys/devices/platform/kcal_ctrl.0(/.*)?                      u:object_r:kcal_dev:s0
 /sys/bus/platform/drivers/kcal_ctrl(/.*)?                    u:object_r:kcal_dev:s0
+
+# device nodes
+/dev/stune(/.*)?                                        u:object_r:cgroup:s0
