@@ -115,6 +115,7 @@
     <hidden-api-whitelisted-app package="org.codeaurora.bluetooth" />
     <hidden-api-whitelisted-app package="org.codeaurora.gallery" />
     <hidden-api-whitelisted-app package="org.codeaurora.snapcam" />
+    <allow-implicit-broadcast action="org.codeaurora.intent.action.CALL_COMPOSER_INFO" />
 
     <!-- camera applications -->
     <hidden-api-whitelisted-app package="com.google.camera.GoogleCamera" />
