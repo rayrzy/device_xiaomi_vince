@@ -3159,7 +3159,6 @@ case "$target" in
                 for cpubw in $device/*cpu-cpu-ddr-bw/devfreq/*cpu-cpu-ddr-bw
                 do
                     echo "bw_hwmon" > $cpubw/governor
-                    echo 50 > $cpubw/polling_interval
                     echo 762 > $cpubw/min_freq
                     if [ ${ddr_type:4:2} == $ddr_type4 ]; then
                         # LPDDR4
@@ -3179,7 +3178,8 @@ case "$target" in
                     echo 80 > $cpubw/bw_hwmon/down_thres
                     echo 0 > $cpubw/bw_hwmon/guard_band_mbps
                     echo 250 > $cpubw/bw_hwmon/up_scale
-                   echo 1600 > $cpubw/bw_hwmon/idle_mbps
+                    echo 1600 > $cpubw/bw_hwmon/idle_mbps
+                    echo 50 > $cpubw/polling_interval
                 done
 
                 for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
@@ -3298,7 +3298,6 @@ case "$target" in
           for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
           do
 	      echo "bw_hwmon" > $cpubw/governor
-	      echo 50 > $cpubw/polling_interval
 	      echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
 	      echo 4 > $cpubw/bw_hwmon/sample_ms
 	      echo 68 > $cpubw/bw_hwmon/io_percent
@@ -3308,12 +3307,12 @@ case "$target" in
 	      echo 0 > $cpubw/bw_hwmon/guard_band_mbps
 	      echo 250 > $cpubw/bw_hwmon/up_scale
 	      echo 1600 > $cpubw/bw_hwmon/idle_mbps
+              echo 50 > $cpubw/polling_interval
 	  done
 
 	  for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
 	  do
 	      echo "bw_hwmon" > $llccbw/governor
-	      echo 40 > $llccbw/polling_interval
 	      echo "1144 1720 2086 2929 3879 5931 6881" > $llccbw/bw_hwmon/mbps_zones
 	      echo 4 > $llccbw/bw_hwmon/sample_ms
 	      echo 68 > $llccbw/bw_hwmon/io_percent
@@ -3323,6 +3322,7 @@ case "$target" in
 	      echo 0 > $llccbw/bw_hwmon/guard_band_mbps
 	      echo 250 > $llccbw/bw_hwmon/up_scale
 	      echo 1600 > $llccbw/bw_hwmon/idle_mbps
+              echo 40 > $llccbw/polling_interval
 	  done
 
 	    #Enable mem_latency governor for L3, LLCC, and DDR scaling
@@ -3419,7 +3419,6 @@ case "$target" in
                 for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
                 do
                     echo "bw_hwmon" > $cpubw/governor
-                    echo 50 > $cpubw/polling_interval
                     echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
                     echo 4 > $cpubw/bw_hwmon/sample_ms
                     echo 68 > $cpubw/bw_hwmon/io_percent
@@ -3429,12 +3428,12 @@ case "$target" in
                     echo 0 > $cpubw/bw_hwmon/guard_band_mbps
                     echo 250 > $cpubw/bw_hwmon/up_scale
                     echo 1600 > $cpubw/bw_hwmon/idle_mbps
+                    echo 50 > $cpubw/polling_interval
                 done
 
                 for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
                 do
                     echo "bw_hwmon" > $llccbw/governor
-                    echo 40 > $llccbw/polling_interval
                     echo "1144 1720 2086 2929 3879 5931 6881" > $llccbw/bw_hwmon/mbps_zones
                     echo 4 > $llccbw/bw_hwmon/sample_ms
                     echo 68 > $llccbw/bw_hwmon/io_percent
@@ -3444,13 +3443,13 @@ case "$target" in
                     echo 0 > $llccbw/bw_hwmon/guard_band_mbps
                     echo 250 > $llccbw/bw_hwmon/up_scale
                     echo 1600 > $llccbw/bw_hwmon/idle_mbps
+                    echo 40 > $llccbw/polling_interval
                 done
 
                 for npubw in $device/*npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw
                 do
                     echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
                     echo "bw_hwmon" > $npubw/governor
-                    echo 40 > $npubw/polling_interval
                     echo "1144 1720 2086 2929 3879 5931 6881" > $npubw/bw_hwmon/mbps_zones
                     echo 4 > $npubw/bw_hwmon/sample_ms
                     echo 80 > $npubw/bw_hwmon/io_percent
@@ -3460,6 +3459,7 @@ case "$target" in
                     echo 0 > $npubw/bw_hwmon/guard_band_mbps
                     echo 250 > $npubw/bw_hwmon/up_scale
                     echo 0 > $npubw/bw_hwmon/idle_mbps
+                    echo 40 > $npubw/polling_interval
                     echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
                 done
 
@@ -3604,7 +3604,6 @@ case "$target" in
             for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
             do
                 echo "bw_hwmon" > $cpubw/governor
-                echo 50 > $cpubw/polling_interval
                 echo "2288 4577 7110 9155 12298 14236 16265" > $cpubw/bw_hwmon/mbps_zones
                 echo 4 > $cpubw/bw_hwmon/sample_ms
                 echo 68 > $cpubw/bw_hwmon/io_percent
@@ -3614,12 +3613,12 @@ case "$target" in
                 echo 0 > $cpubw/bw_hwmon/guard_band_mbps
                 echo 250 > $cpubw/bw_hwmon/up_scale
                 echo 1600 > $cpubw/bw_hwmon/idle_mbps
+                echo 50 > $cpubw/polling_interval
             done
 
             for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
             do
                 echo "bw_hwmon" > $llccbw/governor
-                echo 50 > $llccbw/polling_interval
                 echo "1144 1720 2086 2929 3879 5931 6881 7980" > $llccbw/bw_hwmon/mbps_zones
                 echo 4 > $llccbw/bw_hwmon/sample_ms
                 echo 68 > $llccbw/bw_hwmon/io_percent
@@ -3629,13 +3628,13 @@ case "$target" in
                 echo 0 > $llccbw/bw_hwmon/guard_band_mbps
                 echo 250 > $llccbw/bw_hwmon/up_scale
                 echo 1600 > $llccbw/bw_hwmon/idle_mbps
+                echo 50 > $llccbw/polling_interval
             done
 
             for npubw in $device/*npu*-ddr-bw/devfreq/*npu*-ddr-bw
             do
                 echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
                 echo "bw_hwmon" > $npubw/governor
-                echo 40 > $npubw/polling_interval
                 echo "1144 1720 2086 2929 3879 5931 6881 7980" > $npubw/bw_hwmon/mbps_zones
                 echo 4 > $npubw/bw_hwmon/sample_ms
                 echo 80 > $npubw/bw_hwmon/io_percent
@@ -3645,14 +3644,14 @@ case "$target" in
                 echo 0 > $npubw/bw_hwmon/guard_band_mbps
                 echo 250 > $npubw/bw_hwmon/up_scale
                 echo 0 > $npubw/bw_hwmon/idle_mbps
+                echo 40 > $npubw/polling_interval
                 echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
             done
 
             for npullccbw in $device/*npu*-llcc-bw/devfreq/*npu*-llcc-bw
         do
                 echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
-            echo "bw_hwmon" > $npullccbw/governor
-                echo 40 > $npullccbw/polling_interval
+                echo "bw_hwmon" > $npullccbw/governor
                 echo "2288 4577 7110 9155 12298 14236 16265" > $npullccbw/bw_hwmon/mbps_zones
                 echo 4 > $npullccbw/bw_hwmon/sample_ms
                 echo 100 > $npullccbw/bw_hwmon/io_percent
@@ -3661,6 +3660,7 @@ case "$target" in
                 echo 30 > $npullccbw/bw_hwmon/down_thres
                 echo 0 > $npullccbw/bw_hwmon/guard_band_mbps
                 echo 250 > $npullccbw/bw_hwmon/up_scale
+                echo 40 > $npullccbw/polling_interval
                 echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
         done
 
@@ -3788,7 +3788,6 @@ case "$target" in
             for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
             do
                 echo "bw_hwmon" > $cpubw/governor
-                echo 50 > $cpubw/polling_interval
                 echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
                 echo 4 > $cpubw/bw_hwmon/sample_ms
                 echo 68 > $cpubw/bw_hwmon/io_percent
@@ -3798,12 +3797,12 @@ case "$target" in
                 echo 0 > $cpubw/bw_hwmon/guard_band_mbps
                 echo 250 > $cpubw/bw_hwmon/up_scale
                 echo 1600 > $cpubw/bw_hwmon/idle_mbps
+                echo 50 > $cpubw/polling_interval
             done
 
             for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
             do
                 echo "bw_hwmon" > $llccbw/governor
-                echo 40 > $llccbw/polling_interval
                 echo "1144 1720 2086 2929 3879 5931 6881 8137" > $llccbw/bw_hwmon/mbps_zones
                 echo 4 > $llccbw/bw_hwmon/sample_ms
                 echo 68 > $llccbw/bw_hwmon/io_percent
@@ -3813,13 +3812,13 @@ case "$target" in
                 echo 0 > $llccbw/bw_hwmon/guard_band_mbps
                 echo 250 > $llccbw/bw_hwmon/up_scale
                 echo 1600 > $llccbw/bw_hwmon/idle_mbps
+                echo 40 > $llccbw/polling_interval
             done
 
             for npubw in $device/*npu*-ddr-bw/devfreq/*npu*-ddr-bw
             do
                 echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
                 echo "bw_hwmon" > $npubw/governor
-                echo 40 > $npubw/polling_interval
                 echo "1144 1720 2086 2929 3879 5931 6881 7980" > $npubw/bw_hwmon/mbps_zones
                 echo 4 > $npubw/bw_hwmon/sample_ms
                 echo 80 > $npubw/bw_hwmon/io_percent
@@ -3829,6 +3828,7 @@ case "$target" in
                 echo 0 > $npubw/bw_hwmon/guard_band_mbps
                 echo 250 > $npubw/bw_hwmon/up_scale
                 echo 0 > $npubw/bw_hwmon/idle_mbps
+                echo 40 > $npubw/polling_interval
                 echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
             done
 
@@ -3836,7 +3836,6 @@ case "$target" in
             do
                 echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
                 echo "bw_hwmon" > $npullccbw/governor
-                echo 40 > $npullccbw/polling_interval
                 echo "2288 4577 7110 9155 12298 14236 16265" > $npullccbw/bw_hwmon/mbps_zones
                 echo 4 > $npullccbw/bw_hwmon/sample_ms
                 echo 100 > $npullccbw/bw_hwmon/io_percent
@@ -3845,6 +3844,7 @@ case "$target" in
                 echo 30 > $npullccbw/bw_hwmon/down_thres
                 echo 0 > $npullccbw/bw_hwmon/guard_band_mbps
                 echo 250 > $npullccbw/bw_hwmon/up_scale
+                echo 40 > $npullccbw/polling_interval
                 echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
             done
 
@@ -4184,7 +4184,6 @@ case "$target" in
         for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
         do
             echo "bw_hwmon" > $cpubw/governor
-            echo 50 > $cpubw/polling_interval
             echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
             echo 4 > $cpubw/bw_hwmon/sample_ms
             echo 68 > $cpubw/bw_hwmon/io_percent
@@ -4194,12 +4193,12 @@ case "$target" in
             echo 0 > $cpubw/bw_hwmon/guard_band_mbps
             echo 250 > $cpubw/bw_hwmon/up_scale
             echo 1600 > $cpubw/bw_hwmon/idle_mbps
+            echo 50 > $cpubw/polling_interval
         done
 
         for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
         do
             echo "bw_hwmon" > $llccbw/governor
-            echo 40 > $llccbw/polling_interval
             echo "1144 1720 2086 2929 3879 5931 6881 8137" > $llccbw/bw_hwmon/mbps_zones
             echo 4 > $llccbw/bw_hwmon/sample_ms
             echo 68 > $llccbw/bw_hwmon/io_percent
@@ -4209,13 +4208,13 @@ case "$target" in
             echo 0 > $llccbw/bw_hwmon/guard_band_mbps
             echo 250 > $llccbw/bw_hwmon/up_scale
             echo 1600 > $llccbw/bw_hwmon/idle_mbps
+            echo 40 > $llccbw/polling_interval
         done
 
         for npubw in $device/*npu*-npu-ddr-bw/devfreq/*npu*-npu-ddr-bw
         do
             echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
             echo "bw_hwmon" > $npubw/governor
-            echo 40 > $npubw/polling_interval
             echo "1144 1720 2086 2929 3879 5931 6881 8137" > $npubw/bw_hwmon/mbps_zones
             echo 4 > $npubw/bw_hwmon/sample_ms
             echo 80 > $npubw/bw_hwmon/io_percent
@@ -4225,6 +4224,7 @@ case "$target" in
             echo 0 > $npubw/bw_hwmon/guard_band_mbps
             echo 250 > $npubw/bw_hwmon/up_scale
             echo 0 > $npubw/bw_hwmon/idle_mbps
+            echo 40 > $npubw/polling_interval
             echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
         done
 
@@ -5032,7 +5032,6 @@ case "$target" in
 	    for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
 	    do
 		echo "bw_hwmon" > $cpubw/governor
-		echo 40 > $cpubw/polling_interval
 		echo "2288 4577 7110 9155 12298 14236 15258" > $cpubw/bw_hwmon/mbps_zones
 		echo 4 > $cpubw/bw_hwmon/sample_ms
 		echo 50 > $cpubw/bw_hwmon/io_percent
@@ -5043,12 +5042,12 @@ case "$target" in
 		echo 250 > $cpubw/bw_hwmon/up_scale
 		echo 1600 > $cpubw/bw_hwmon/idle_mbps
 		echo 14236 > $cpubw/max_freq
+                echo 40 > $cpubw/polling_interval
 	    done
 
 	    for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
 	    do
 		echo "bw_hwmon" > $llccbw/governor
-		echo 40 > $llccbw/polling_interval
 		echo "1720 2929 3879 5931 6881 7980" > $llccbw/bw_hwmon/mbps_zones
 		echo 4 > $llccbw/bw_hwmon/sample_ms
 		echo 80 > $llccbw/bw_hwmon/io_percent
@@ -5059,13 +5058,13 @@ case "$target" in
 		echo 250 > $llccbw/bw_hwmon/up_scale
 		echo 1600 > $llccbw/bw_hwmon/idle_mbps
 		echo 6881 > $llccbw/max_freq
+                echo 40 > $llccbw/polling_interval
 	    done
 
 	    for npubw in $device/*npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw
 	    do
 		echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
 		echo "bw_hwmon" > $npubw/governor
-		echo 40 > $npubw/polling_interval
 		echo "1720 2929 3879 5931 6881 7980" > $npubw/bw_hwmon/mbps_zones
 		echo 4 > $npubw/bw_hwmon/sample_ms
 		echo 80 > $npubw/bw_hwmon/io_percent
@@ -5075,6 +5074,7 @@ case "$target" in
 		echo 0 > $npubw/bw_hwmon/guard_band_mbps
 		echo 250 > $npubw/bw_hwmon/up_scale
 		echo 0 > $npubw/bw_hwmon/idle_mbps
+                echo 40 > $npubw/polling_interval
 		echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
 	    done
 
