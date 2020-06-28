@@ -377,6 +377,9 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
 
+on property:dev.bootcomplete=1
+    restart ril-daemon
+
 # FPS Info
 on boot
     chown system graphics /sys/class/graphics/fb0/measured_fps
