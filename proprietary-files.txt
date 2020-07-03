@@ -793,8 +793,8 @@ vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|1744e3421733a2
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|6d98d812f84c060ddcb4b78aa5ef3b7cf3772020
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|e6a2cccf7cd005db7c232485a031341c0eb0918c
 
-# FM Radio - from LA.UM.8.6.r1-04400-89xx.0
-vendor/bin/fm_qsoc_patches|82ab33e928933b8077e77c1532a58b61a3551932
+# FM Radio - from LA.UM.8.6.2.r1-07600-89xx.0
+vendor/bin/fm_qsoc_patches|5b5accb606681fb1c7abc2efc8b5208ff220eb88
 vendor/bin/init.qti.fm.sh|0ac820dd85ebdf5fa73b5e971f6787ff35ceb65d
 vendor/etc/init/init.qti.fm.rc|07cb64e2109a900eb6e1da1950fddba954d0f8d6
 
