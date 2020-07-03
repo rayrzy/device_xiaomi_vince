@@ -642,8 +642,8 @@ vendor/firmware/cpp_firmware_v1_10_0.fw
 vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_1_6.fw
 
-# Charger - from LA.UM.8.6.r1-04400-89xx.0
-vendor/bin/hvdcp_opti|7b7cda55c81d523e0fd5741082209bd60f9f6586
+# Charger - from LA.UM.8.6.2.r1-07600-89xx.0
+vendor/bin/hvdcp_opti|e46ec16610d74f941c58848d8f075fbb1c9f367d
 
 # CNE - from LA.UM.8.6.r1-04400-89xx.0
 etc/cne/Nexus/ATT/ATT_profiles.xml|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52
