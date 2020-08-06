@@ -183,6 +183,12 @@ on charger
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
 
+# Update cpusets on boot and we want better load balancing
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+
 # smart charging
     chown system system /sys/class/power_supply/battery/input_suspend	
     chmod 0666 /sys/class/power_supply/battery/input_suspend
