@@ -25,15 +25,38 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <android-base/properties.h>
 #include <fcntl.h>
 #include <stdlib.h>
 #include <sys/sysinfo.h>
+
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 
 #include "log/log.h"
 #include "property_service.h"
 #include "vendor_init.h"
 
 using android::init::property_set;
+
+void property_override(char const prop[], char const value[])
+{
+    prop_info *pi;
+
+    pi = (prop_info*) __system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
+void property_override_triple(char const product_prop[], char const system_prop[], char const vendor_prop[],
+    char const value[])
+{
+    property_override(product_prop, value);
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
+}
 
 void vendor_load_properties() {
     property_set("dalvik.vm.heapstartsize", "8m");
@@ -42,4 +65,10 @@ void vendor_load_properties() {
     property_set("dalvik.vm.heaptargetutilization", "0.6");
     property_set("dalvik.vm.heapminfree", "8m");
     property_set("dalvik.vm.heapmaxfree", "16m");
+
+    property_override("ro.product.model", "Redmi 5 Plus");
+    property_override("ro.build.product", "vince");
+    property_override("ro.product.device", "vince");
+    property_override("ro.build.description", "vince-user 8.1.0 OPM1.171019.019 V11.0.2.0.OEGMIXM release-keys");
+    property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.019/4527419:user/release-keys");
 }
