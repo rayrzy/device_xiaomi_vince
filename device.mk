@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     camera.msm8953 \
     libmm-qcamera \
+    libui_shim \
     Snap
 
 # Consumerir
@@ -230,8 +231,7 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml \
-    libui_shim
+    ims_ext_common.xml
 
 # IPACM Data
 include $(TOPDIR)vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk
