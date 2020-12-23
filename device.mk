@@ -9,6 +9,9 @@ $(call inherit-product, vendor/xiaomi/vince/vince-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# RRO (Runtime Resource Overlay)
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Enable updating of APEXes
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -20,9 +23,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
-
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
