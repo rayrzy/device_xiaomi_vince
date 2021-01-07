@@ -198,6 +198,7 @@ persist.vendor.radio.custom_ecc=1 \
 persist.vendor.radio.hw_mbn_update=0 \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
+persist.vendor.data.iwlan.enable=true \
 ril.subscription.types=NV,RUIM \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 ro.telephony.call_ring.multiple=false \
