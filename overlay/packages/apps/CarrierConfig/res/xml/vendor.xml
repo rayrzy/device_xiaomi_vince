@@ -2169,7 +2169,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
        </carrier_config>
 
-
     <carrier_config mcc="405" mnc="51">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -2248,7 +2247,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
 
-
     <carrier_config mcc="310" mnc="120">
         <boolean name="rtt_supported_bool" value="true" />
         <boolean name="carrier_rtt_upgrade_supported" value="true" />
@@ -2257,8 +2255,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
 
+    <carrier_config mcc="510" mnc="01">
+        <boolean name="carrier_volte_available_bool" value="true"/>
+    </carrier_config>
+
     <carrier_config mcc="510" mnc="09">
         <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="11">
+        <boolean name="carrier_volte_available_bool" value="true"/>
     </carrier_config>
 
     <carrier_config>
