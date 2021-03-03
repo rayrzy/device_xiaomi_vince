@@ -190,6 +190,10 @@ persist.vendor.ims.disableQXDMLogs=1
 # Recovery
 persist.vendor.recovery_update=false
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8953
+
 # SurfaceFlinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
