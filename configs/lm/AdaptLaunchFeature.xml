@@ -41,5 +41,6 @@
     <IgnoredApps>
         <App>com.king.candycrushsaga</App>
         <App>com.tencent.tmgp.sgame</App>
+        <App>com.tencent.ig</App>
     </IgnoredApps>
 </Feature>
