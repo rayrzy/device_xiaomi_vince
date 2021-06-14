@@ -2,3 +2,9 @@ allow platform_app hal_alarm_qti_default:binder call;
 allow platform_app hal_alarm_qti_hwservice:hwservice_manager find;
 allow platform_app sysfs_fps:file { getattr open read };
 allow platform_app sysfs_graphics:dir search;
+
+# QS System Info
+allow platform_app sysfs_device_info:lnk_file { read open getattr ioctl };
+allow platform_app sysfs_kgsl:file { read open getattr ioctl };
+allow platform_app sysfs_battery_supply:dir search;
+allow platform_app sysfs_battery_supply:file { read open getattr ioctl };
