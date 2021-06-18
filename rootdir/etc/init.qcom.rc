@@ -254,6 +254,10 @@ on property:sys.boot_completed=1
     chmod 0664 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,fg/power_supply/bms/hi_power
     write /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:qcom,fg/power_supply/bms/hi_power 1
 
+    # Restrict permissions to socket file 
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
