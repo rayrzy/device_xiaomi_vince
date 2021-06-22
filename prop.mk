@@ -179,6 +179,11 @@ persist.vendor.radio.nitz_sons_1="" \
 persist.vendor.radio.nitz_sons_2="" \
 persist.vendor.radio.nitz_sons_3=""
 
+# Iorap
+PRODUCT_PROPERTY_OVERRIDES += \
+iorapd.perfetto.enable=true \
+iorapd.readahead.enable=true
+
 # Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.qti.va_aosp.support=1 \
