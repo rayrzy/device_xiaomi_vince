@@ -3,3 +3,6 @@ allow system_server sysfs_vibrator:file read;
 
 # smart charging
 allow system_server sysfs_battery_supply:file { getattr open read write };
+r_dir_file(untrusted_app, sysfs_battery_supply)
+r_dir_file(untrusted_app, sysfs_usb_supply)
+allow system_server sysfs_usb_supply:file { getattr open read write };
