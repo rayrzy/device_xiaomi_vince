@@ -370,7 +370,8 @@ PRODUCT_PACKAGES += \
     init.soundcontrol.rc \
     init.target.rc \
     init.veth_ipa_config.sh \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.performance_level.rc
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
