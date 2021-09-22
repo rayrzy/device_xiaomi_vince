@@ -379,6 +379,9 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
 
+on property:hw.fm.init=*
+    write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
+
 on property:dev.bootcomplete=1
     restart ril-daemon
 
