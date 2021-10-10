@@ -94,6 +94,9 @@ persist.camera.sensor.debug=0
 persist.camera.HAL3.enabled=1
 persist.camera.stats.test=5
 
+# Camera (vilte)
+persist.vendor.qti.telephony.vt_cam_interface=2
+
 # Cne
 persist.vendor.cne.feature=1
 persist.vendor.mwqem.enable=1
