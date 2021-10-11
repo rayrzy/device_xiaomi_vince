@@ -85,6 +85,10 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+# APEX updates
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.apex.updatable=true
+
 # APNS Config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
