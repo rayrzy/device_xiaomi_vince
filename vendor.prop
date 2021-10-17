@@ -17,6 +17,7 @@ dalvik.vm.image-dex2oat-threads=8
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
 audio.offload.video=true
+persist.audio.dirac.speaker=true
 persist.vendor.audio.hw.binder.size_kbyte=1024
 ro.af.client_heap_size_kbyte=7168
 ro.vendor.audio.sdk.ssr=false
