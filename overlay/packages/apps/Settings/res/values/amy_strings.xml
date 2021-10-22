@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- amyROM Device Maintainer -->
+    <string name="amyrom_maintainer">rayrzy</string>
+
+    <!-- amyROM Device Info -->
+    <string name="amy_device_platform_summary">msm8953</string>
+    <string name="amy_chipset_type_summary">Qualcomm Snapdragon™ 625</string>
+    <string name="amy_gpu_summary">Aderno 506</string>
+    <string name="amy_camera_mp_summary">12MP Single Camera</string>
+    <string name="amy_screen_type_summary">IPS LCD FHD+ 5.99" Screen</string>
+</resources>
