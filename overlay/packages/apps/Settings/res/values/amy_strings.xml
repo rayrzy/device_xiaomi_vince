@@ -7,7 +7,7 @@
     <!-- amyROM Device Info -->
     <string name="amy_device_platform_summary">msm8953</string>
     <string name="amy_chipset_type_summary">Qualcomm Snapdragon™ 625</string>
-    <string name="amy_gpu_summary">Aderno 506</string>
+    <string name="amy_gpu_summary">Adreno 506</string>
     <string name="amy_camera_mp_summary">12MP Single Camera</string>
     <string name="amy_screen_type_summary">IPS LCD FHD+ 5.99" Screen</string>
 </resources>
