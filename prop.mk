@@ -87,6 +87,14 @@ persist.vendor.cne.feature=1
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.debug.coresight.config=stm-events
 
+# Dirac
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.dirac.acs.controller=qem \
+persist.dirac.acs.storeSettings=1 \
+persist.dirac.acs.ignore_error=1 \
+ro.audio.soundfx.dirac=true \
+persist.audio.dirac.speaker=true
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.cpurend.vsync=false \

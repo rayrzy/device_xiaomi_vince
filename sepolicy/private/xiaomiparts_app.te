@@ -1,0 +1,32 @@
+type xiaomiparts_app, domain;
+
+app_domain(xiaomiparts_app)
+
+# Access standard system services
+allow xiaomiparts_app app_api_service:service_manager find;
+
+allow xiaomiparts_app {
+    audio_service
+    activity_service
+    activity_task_service
+    audio_service
+    audioserver_service
+    autofill_service
+    gpu_service
+    media_session_service
+    mediaserver_service
+    storagestats_service
+    surfaceflinger_service
+}:service_manager find;
+
+allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
+allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
+
+# kcal
+allow xiaomiparts_app kcal_dev:dir search;
+allow xiaomiparts_app kcal_dev:file rw_file_perms;
+
+# Allow XiaomiParts to read and write to cgroup
+allow xiaomiparts_app cgroup:file rw_file_perms;
+
+binder_call(xiaomiparts_app, gpuservice)
