@@ -917,6 +917,10 @@ product/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml|a062041908164045e8
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6da6043f85f4b9b0e85866429624
 
+# IRQ Balance - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/bin/msm_irqbalance|e5706bc0acab394b53fafdc1d7f342f69c6f5649
+vendor/etc/msm_irqbalance.conf|3e45e1da03ab49ce9d3f855011aca00f1e417a53
+
 # Keystore - from LA.UM.9.6.2.r1-04200-89xx.0
 vendor/lib64/hw/keystore.msm8953.so|0a68ac29004f72237f48008cea188dd98d6c6560
 
@@ -969,7 +973,6 @@ etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin
 
 # Perf - from LA.UM.8.6.2.r1-08400-89xx.0
 vendor/bin/energy-awareness|056792da4f0bcfc34b1f85e3ee67820d8c80627f
-vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
 vendor/bin/hw/vendor.qti.hardware.perf@2.1-service|2e3be88cad2d9b9aa4edc8e68ad5f4d4e7eeaedc
 vendor/etc/init/vendor.qti.hardware.perf@2.1-service.rc|0d7eaa2a99b16738f4e40d7ee7473bb0dd705d2c
 vendor/lib/libperfconfig.so|fff23537940b4849ce805539060e4b75cfc22593
