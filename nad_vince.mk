@@ -23,7 +23,7 @@ $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := nad_vince
-PRODUCT_BRAND := Xiaomi
+PRODUCT_BRAND := xiaomi
 PRODUCT_MODEL := Redmi 5 Plus
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
