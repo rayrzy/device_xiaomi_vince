@@ -218,6 +218,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libwifi-hal-ctrl
 
+# GrapheneCamera
+PRODUCT_PACKAGES += \
+    GrapheneCamera
+
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
