@@ -98,7 +98,6 @@ $(foreach lib,$(VNDK_SP_EXT_LIBRARIES),\
 $(foreach lib,$(EXTRA_VENDOR_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,,true)))
 
-
 #-------------------------------------------------------------------------------
 # Phony Package
 #-------------------------------------------------------------------------------

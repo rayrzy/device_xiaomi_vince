@@ -1,21 +1,10 @@
 #
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 #
 
 $(call inherit-product, vendor/xiaomi/vince/vince-vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -161,7 +150,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # Dirac
 PRODUCT_PACKAGES += \
-	Dirac
+    Dirac
 
 # Display
 PRODUCT_PACKAGES += \
@@ -177,7 +166,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libdisplayconfig \
-	libvulkan \
+    libvulkan \
     liboverlay \
     libqdMetaData.system \
     libgenlock \
