@@ -248,10 +248,6 @@ persist.vendor.delta_time.enable=true
 PRODUCT_PROPERTY_OVERRIDES += \
 net.tcp.2g_init_rwnd=10
 
-# Usb
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.usb.config.extra=none
-
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
