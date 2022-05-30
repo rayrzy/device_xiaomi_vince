@@ -39,6 +39,11 @@ BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_SOURCE := kernel/xiaomi/vince
 TARGET_KERNEL_VERSION := 4.9
+TARGET_KERNEL_NEW_GCC_COMPILE := true
+KERNEL_TOOLCHAIN_arm64 := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
+KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-elf-
+KERNEL_TOOLCHAIN_arm := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi/bin
+KERNEL_TOOLCHAIN_PREFIX_arm := arm-eabi-
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
