@@ -161,8 +161,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.sys.fw.dex2oat_thread_count=8 \
 debug.qcom_ignore_qperf=true \
 debug.qcom_ignore_uxperf=true \
-ro.vendor.perf.scroll_opt=true \
-ro.vendor.perf.scroll_opt.heavy_app=true \
 ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Netmgrd
