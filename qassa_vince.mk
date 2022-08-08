@@ -12,12 +12,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from vince device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common havoc stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+# Inherit some common keepQASSA stuff.
+$(call inherit-product, vendor/qassa/config/common_full_phone.mk)
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+USE_PIXEL_CHARGING := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
-PRODUCT_NAME := havoc_vince
+PRODUCT_NAME := qassa_vince
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 5 Plus
 PRODUCT_MANUFACTURER := Xiaomi
