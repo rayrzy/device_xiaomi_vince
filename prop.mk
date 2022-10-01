@@ -160,8 +160,7 @@ vendor.video.disable.ubwc=1
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.sys.fw.dex2oat_thread_count=8 \
 debug.qcom_ignore_qperf=true \
-debug.qcom_ignore_uxperf=true \
-ro.vendor.qti.sys.fw.bservice_enable=true
+debug.qcom_ignore_uxperf=true
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
