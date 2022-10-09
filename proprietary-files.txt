@@ -1364,10 +1364,10 @@ vendor/bin/thermal-engine|a8bc9bb1ed717c886316dd42b8af0ebb59b2bbec
 vendor/lib/libthermalfeature.so|13c27adf6e6ce8728854542c3ed8f3d12ade5615
 vendor/lib64/libthermalfeature.so|1c408911610e5b6a11853aff1900860f9e9a861f
 
-# Time services - from daisy_sprout:10/QKQ1.191002.002/V11.0.10.0.QDLMIXM
+# Time services - from daisy_sprout:10/QKQ1.191002.002/V11.0.21.0.QDLMIXM
 -vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um|27f9b81621c446baa8c37581d9bfbca2fd67b496
 vendor/bin/time_daemon|75b8a6a14cfb4424499ccb2bf1cad011df295d0e
-vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+vendor/etc/init/init.time_daemon.rc|5ed82bca8bef5cf52a597806a380ba560ed76911
 vendor/lib64/libtime_genoff.so|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
 
 # TUI - from LA.UM.8.6.2.r1-07600-89xx.0
