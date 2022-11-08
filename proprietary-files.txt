@@ -1380,10 +1380,8 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|1ac676dca4c81094b254b62f1b608e4
 vendor/lib/vndk-sp/libcutils.so|846d5769b71abca5b8fa185d4cf83a5cf1afed3c
 vendor/lib/vndk/libprocessgroup.so|d2b88fec1e836193252456335e93afe058d84515
 
-# Wi-Fi - from Tissot PKQ1.180917.001.V10.0.18.0.PDHMIXM
-vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
-vendor/firmware/wlan/prima/WCNSS_cfg.dat|1672af1c3d4f04804f31d4b79a6e59ea4a8b1926
-vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin|5e97baa4957609519835074071c879fbaf462266
+# Wi-Fi - from Daisy QKQ1.191002.002 V11.0.21.0.QDLMIXM
+vendor/bin/wcnss_service|1a7da5ec11248ea69af665d711a846e4cc7c95be
 
 # Wi-Fi Display - from LA.UM.8.6.2.r1-07600-89xx.0
 bin/wfdservice|934817e5689fe6f8b54032902de58c203b8ec2e7
