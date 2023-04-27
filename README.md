@@ -12,11 +12,11 @@
 | Storage                 | 32/64 GB                          |
 | MicroSD                 | Up to 256 GB                      |
 | Battery                 | 4000 mAh (non-removable)          |
-| Dimensions              | 158.5 x 75.4 x 8.0 mm             |
-| Display                 | 2160x1080 pixels, 5.9 (~401 PPI)  |
+| Dimensions              | 158.5 x 75.5 x 8.1 mm             |
+| Display                 | 2160x1080 pixels, 5.99" (~403 ppi)|
 | Rear Camera             | 12 MP, LED flash                  |
 | Front Camera            | 5 MP                              |
-| Release Date            | April 2017                        |
+| Release Date            | February 2018                     |
 
 ## Device Picture
 
